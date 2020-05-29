@@ -10,7 +10,7 @@ public class CarDTO {
     this.distance = distance;
   }
 
-  public static CarDTO newInstace(Car car) {
+  public static CarDTO newInstanceFromCar(Car car) {
     return new CarDTO(car.getName(), car.getDistance());
   }
 

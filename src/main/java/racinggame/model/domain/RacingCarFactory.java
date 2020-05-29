@@ -33,12 +33,8 @@ public class RacingCarFactory {
    */
   public static List<CarDTO> createRacingCarDTOList(List<Car> racingCarList) {
     List<CarDTO> racingCarDTOList = racingCarList.stream()
-        .map(CarDTO::newInstace)
+        .map(CarDTO::newInstanceFromCar)
         .collect(Collectors.toList());
-
-    for (int i = 0, endpoint = racingCarList.size(); i < endpoint; i++) {
-      racingCarList.set(i, Car.newInstance(racingCarList.get(i)));
-    }
 
     return racingCarDTOList;
   }
